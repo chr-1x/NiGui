@@ -1959,6 +1959,7 @@ method remove(container: Container, control: Control) =
     for i in startIndex..container.childControls.high:
       container.childControls[i].fIndex = i
     container.triggerRelayout()
+    container.focus()
     control.fParentControl = nil
 
 method setControlPosition(container: Container, control: Control, x, y: int) =
